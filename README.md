@@ -18,7 +18,6 @@ var params = {
 }
 var hook = new Data2FirebaseMQTThook(params);
 hook.hook();
-
 ```
 
 [mqtthook]: https://github.com/evanxd/mqtthook
