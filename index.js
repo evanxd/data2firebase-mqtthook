@@ -6,7 +6,8 @@ var firebase = require('firebase-admin');
 function Data2FirebaseMQTThook(params) {
   this._params = params;
   firebase.initializeApp({
-    credential: params.databaseAuth ? firebase.credential.cert(params.databaseAuth) : undefined,
+    // TODO: support to deal with public databases.
+    credential: firebase.credential.cert(params.databaseAuth),
     databaseURL: params.databaseURL,
   });
   var ref = firebase.database().ref(params.dataReferencePath);
