@@ -8,8 +8,8 @@ firebase.initializeApp({
   databaseURL: config.databaseURL,
 });
 
-var ref = firebase.database().ref(config.referencePath);
-ref.child('info').set({ name: config.stationInfo.name });
+var ref = firebase.database().ref(config.dataReferencePath);
+ref.child('info').set(config.deviceInfo);
 
 mqtthook.hook(config.mqtthook.topic).trigger(data => {
   ref.child('data').push({

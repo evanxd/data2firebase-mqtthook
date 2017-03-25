@@ -1,13 +1,13 @@
 {
   "databaseURL": "https://your-project-id.firebaseio.com",
-  "referencePath": "your/data/reference/path",
+  "dataReferencePath": "your/data/reference/path",
   "mqtthook": {
     "brokerUrl": "mqtt://test.mosquitto.org",
     "options": {},
     "topic": "hooked-topic"
   },
-  "stationInfo": {
-    "name": "Your air quality monitoring station name"
+  "deviceInfo": {
+    "name": "Your device name"
   },
   "debug": false
 }
