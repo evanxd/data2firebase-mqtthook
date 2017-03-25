@@ -17,7 +17,7 @@ mqtthook.hook(config.mqtthook.topic).trigger(data => {
   data.datetime = new Date().toUTCString();
   ref.child('data').push(data, error => {
     config.debug && (error ? console.error(error.message) :
-                             console.log(`Data: ${JSON.stringify(data)}`));
+                             console.log(`Data stored: ${JSON.stringify(data)}`));
   });
 });
 
