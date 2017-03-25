@@ -1,5 +1,6 @@
 {
   "databaseURL": "https://your-project-id.firebaseio.com",
+  "databaseAuth": {},
   "dataReferencePath": "your/data/reference/path",
   "mqtthook": {
     "brokerUrl": "mqtt://test.mosquitto.org",
