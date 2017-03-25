@@ -12,12 +12,9 @@ var ref = firebase.database().ref(config.dataReferencePath);
 ref.child('info').set(config.deviceInfo);
 
 mqtthook.hook(config.mqtthook.topic).trigger(data => {
-  ref.child('data').push({
-      date: new Date().toUTCString(),
-      pm2_5: data.pm2_5,
-    },
-    error => {
-      config.debug && (error ? console.error(error.message) :
-                               console.log(`PM2.5: ${data.pm2_5}`));
-    });
+  data.datetime = data.datetime || new Date().toUTCString();
+  ref.child('data').push(data, error => {
+    config.debug && (error ? console.error(error.message) :
+                             console.log(`Data: ${JSON.stringify(data)}`));
+  });
 });
