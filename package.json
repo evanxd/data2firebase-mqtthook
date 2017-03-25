@@ -1,0 +1,26 @@
+{
+  "name": "data2firebase-mqtthook",
+  "description": "A MQTThook to store sensors data from an IoT device in a Firebase database.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Evan Tseng",
+    "email": "evan@tseng.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/data2firebase-mqtthook"
+  },
+  "keywords": [
+    "iot",
+    "internet-of-things",
+    "mqtt",
+    "mqtthook",
+    "wot",
+    "web-of-things",
+    "webhook"
+  ],
+  "dependencies": {
+    "firebase-admin": "^4.1.3",
+    "mqtthook": "^0.0.8"
+  }
+}
