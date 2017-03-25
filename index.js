@@ -10,9 +10,7 @@ firebase.initializeApp({
 
 var ref = firebase.database().ref(config.referencePath);
 
-ref.child('info').set({
-  name: config.stationInfo.name,
-});
+ref.child('info').set({ name: config.stationInfo.name });
 
 mqtthook.hook(config.mqtthook.topic).trigger(data => {
   ref.child('data').push({
