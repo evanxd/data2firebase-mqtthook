@@ -1,7 +1,7 @@
 {
   "name": "data2firebase-mqtthook",
   "description": "A MQTThook to store sensors data from an IoT device in a Firebase database.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Evan Tseng",
     "email": "evan@tseng.io"
